@@ -17,11 +17,11 @@ export default function quotes() {
     <div className='flex w-full h-full'>
       <div className='px-1 w-1/2 h-full border-purple-800 border-2 rounded'>
         <div className='h-[500px] overflow-y-auto scrollbar'>
+          <QuoteCard nickname='ruslan perdezh' text='aaaaaaa' date='03.09.2022'/>
           <QuoteCard nickname='ruslan perdezh' text='aaaaaaa' date='06.09.2022'/>
           <QuoteCard nickname='ruslan perdezh' text='aaaaaaa' date='06.09.2022'/>
           <QuoteCard nickname='ruslan perdezh' text='aaaaaaa' date='06.09.2022'/>
-          <QuoteCard nickname='ruslan perdezh' text='aaaaaaa' date='06.09.2022'/>
-          <QuoteCard nickname='ruslan perdezh' text='aaaaaaa' date='06.09.2022'/>
+          <QuoteCard nickname='ruslan perdezh' text='aaaaaaa' date='25.09.2022'/>
           <QuoteCard nickname='ruslan perdezh' text='aaaaaaa' date='06.09.2022'/>
           <QuoteCard nickname='ruslan perdezh' text='aaaaaaa' date='06.09.2022'/>
           <QuoteCard nickname='ruslan perdezh' text='aaaaaaa' date='06.09.2022'/>
@@ -31,12 +31,12 @@ export default function quotes() {
         <form className='w-96'>
           <p className='mb-10 text-xl'>Добавить цитату</p>
           <div className='relative w-full mb-8'>
-            <label htmlFor="autor" className='absolute -top-[14px] left-4 px-1 bg-[#150E14]'>Автор</label>
+            <label htmlFor="autor" className='absolute -top-[14px] left-4 px-1 bg-[#150E14]'>Авторы</label>
             <input type="text" autoComplete='off' id='autor' className='w-full text-white outline-none bg-transparent border-2 border-purple-800 rounded-md py-2 px-[10px]'/>
           </div>
           <div className='relative w-full mb-5'>
             <label htmlFor="text" className='absolute -top-[14px] left-4 px-1 bg-[#150E14]'>Текст</label>
-            <input type="text" autoComplete='off' id='text' className='w-full outline-none text-white bg-transparent border-2 border-purple-800 rounded-md py-2 px-[10px]'/>
+            <textarea autoComplete='off' id='text' className='w-full resize outline-none text-white bg-transparent border-2 border-purple-800 rounded-md py-2 px-[10px]'></textarea>
           </div>
           <div className='text-right mb-5'>
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -44,7 +44,7 @@ export default function quotes() {
               margin="normal"
               id="date-picker-dialog"
               label="Укажите дату"
-              format="MM/dd/yyyy"
+              format="dd/MM/yyyy"
               value={selectedDate}
               onChange={handleDateChange}
               KeyboardButtonProps={{
@@ -53,7 +53,7 @@ export default function quotes() {
               />
             </MuiPickersUtilsProvider>
           </div>
-          <Button color='primary' variant='contained' fullWidth >Добавить цитату</Button>
+          <Button color='primary' variant='contained' fullWidth>Добавить цитату</Button>
         </form>
       </div>
     </div>
