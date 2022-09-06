@@ -33,3 +33,40 @@ a {
   }
 }
 
+.MuiFormLabel-root{
+  color: #fff !important;
+}
+
+.MuiInputBase-root{
+  color: #fff !important;
+}
+
+.MuiInput-underline:before{
+  border-bottom: 1px solid #fff !important;
+}
+
+/* .MuiIconButton-root{
+  color: #fff !important
+} */
+
+/* .MuiButtonBase-root{
+  color: rgb(255, 255, 255) !important
+} */
+.MuiIconButton-label{
+  color: rgb(184, 184, 184) !important;
+}
+
+.MuiPickersDay-daySelected{
+  color: rgb(94, 61, 123) !important;
+}
+
+.scrollbar::-webkit-scrollbar{
+  width: 10px;
+}
+
+
+.scrollbar::-webkit-scrollbar-thumb{
+  border-radius: 20px;
+  background-color: blueviolet;
+  padding-right: 10px;
+}
