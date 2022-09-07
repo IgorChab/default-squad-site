@@ -10,7 +10,7 @@ export const MainLayaut: FC<MainProps> = ({children}) => {
   return (
     <div className='grid grid-rows-[auto_1fr_auto] h-full'>
       <Header/>
-        <div className='text-white w-full px-48 py-5'>
+        <div className='text-white w-full px-48 py-5 h-full'>
           {children}
         </div>
       <Footer/>
