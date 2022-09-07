@@ -64,7 +64,6 @@ a {
   width: 10px;
 }
 
-
 .scrollbar::-webkit-scrollbar-thumb{
   border-radius: 20px;
   background-color: blueviolet;
