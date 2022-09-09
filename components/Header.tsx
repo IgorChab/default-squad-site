@@ -2,6 +2,8 @@ import React, { FC, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '../public/Default.png'
+import {Menu} from '@material-ui/icons'
+import {IconButton} from '@material-ui/core'
 
 const navigation = [
     {value: 'Новости', href: '/news'},
@@ -13,19 +15,25 @@ const navigation = [
     {value: 'Курс BBLCN', href: '/bubblecoin'},
 ]
 
+
 export const Header: FC = () => {
   return (
-    <div className='flex gap-10 px-5 bg-stone-800 items-center'>
+    <div className='flex gap-10 px-5 bg-stone-800 items-center media-900:justify-between'>
         <Link href={'/'}>
             <Image src={Logo} width={100} height={100} alt={'logo'} className='cursor-pointer'/>
         </Link>
-        <nav className='flex gap-6 text-[#84A0EF]'>
+        <nav className='flex gap-6 text-[#84A0EF] media-900:hidden'>
             {navigation.map(elem => (
                 <Link href={elem.href} className="hover:text-[#1e46b6]" key={elem.value}>
                     <p className='hover:text-blue-800 cursor-pointer'>{elem.value}</p>
                 </Link>
             ))}
         </nav>
+        <div className='media-900:block hidden'>
+            <IconButton>
+                <Menu/>
+            </IconButton>
+        </div>
     </div>
   )
 }
