@@ -51,9 +51,6 @@ const rows = [
 ];
 
 const useStyles = makeStyles({
-  table: {
-    minWidth: 700,
-  },
   container: {
     overflowY: 'auto',
     height: '0px',
@@ -67,7 +64,7 @@ function CustomizedTables() {
 
   return (
     <TableContainer className={`${classes.container} scrollbar` }>
-      <Table className={classes.table} aria-label="customized table" stickyHeader>
+      <Table aria-label="customized table" stickyHeader>
         <TableHead>
           <TableRow>
             <StyledTableCell>№</StyledTableCell>
