@@ -6,6 +6,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import Head from 'next/head'
 
 const StyledTableCell = withStyles(() =>
   createStyles({
@@ -90,11 +91,16 @@ function CustomizedTables() {
 
 export default function top() {
   return (
-    <div className='flex w-full h-full'>
-        <div className='flex flex-col px-1 pb-2 w-full h-full'>
-             <CustomizedTables/>
-        </div>
-    </div>
+    <>
+      <Head>
+            <title>Bubble Top</title>
+      </Head>
+      <div className='flex w-full h-full'>
+          <div className='flex flex-col px-1 pb-2 w-full h-full'>
+              <CustomizedTables/>
+          </div>
+      </div>
+    </>
   )
 }
 

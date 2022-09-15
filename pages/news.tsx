@@ -1,9 +1,14 @@
 import React from 'react'
-
+import Head from 'next/head'
 export default function news() {
   return (
-    <div className='text-white'>
-        news
-    </div>
+    <>
+      <Head>
+          <title>Новости</title>
+      </Head>
+      <div className='text-white'>
+          news
+      </div>
+    </>
   )
 }

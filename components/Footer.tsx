@@ -4,7 +4,7 @@ export const Footer: FC= () => {
   return (
     <div className='text-white bg-stone-800 text-center w-full p-4'>
         <p>@ 2022 Default Squad</p>
-        <p>All rigth reserved</p>
+        <p>All right reserved</p>
     </div>
   )
 }

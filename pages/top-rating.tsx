@@ -6,6 +6,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import Head from 'next/head'
 
 const StyledTableCell = withStyles(() =>
   createStyles({
@@ -63,30 +64,35 @@ function CustomizedTables() {
   const classes = useStyles();
 
   return (
-    <TableContainer className={`${classes.container} scrollbar` }>
-      <Table aria-label="customized table" stickyHeader>
-        <TableHead>
-          <TableRow>
-            <StyledTableCell>№</StyledTableCell>
-            <StyledTableCell align="right">Nickname</StyledTableCell>
-            <StyledTableCell align="right">Dubbles</StyledTableCell>
-            <StyledTableCell align="right">League</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell component="th" scope="row">
-                {row.name}
-              </StyledTableCell>
-              <StyledTableCell align="right">{row.calories}</StyledTableCell>
-              <StyledTableCell align="right">{row.fat}</StyledTableCell>
-              <StyledTableCell align="right">{row.league}</StyledTableCell>
-            </StyledTableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <>
+      <Head>
+            <title>League Top</title>
+      </Head>
+      <TableContainer className={`${classes.container} scrollbar` }>
+        <Table aria-label="customized table" stickyHeader>
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>№</StyledTableCell>
+              <StyledTableCell align="right">Nickname</StyledTableCell>
+              <StyledTableCell align="right">Dubbles</StyledTableCell>
+              <StyledTableCell align="right">League</StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <StyledTableRow key={row.name}>
+                <StyledTableCell component="th" scope="row">
+                  {row.name}
+                </StyledTableCell>
+                <StyledTableCell align="right">{row.calories}</StyledTableCell>
+                <StyledTableCell align="right">{row.fat}</StyledTableCell>
+                <StyledTableCell align="right">{row.league}</StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </>
   );
 }
 

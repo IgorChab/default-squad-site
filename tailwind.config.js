@@ -107,6 +107,31 @@ module.exports = {
           width: '70px',
           opacity: 0,
         }
+      },
+      focusInput:{
+        '0%': {
+          top: '14px'
+        },
+        '100%': {
+          top: '-12px',
+          zIndex: '10',
+          backgroundColor: '#150E14',
+          padding: '0 4px',
+          fontSize: '16px'
+        }
+      },
+      focusInputEnd:{
+        '0%': {
+          top: '-12px',
+          zIndex: '10',
+          backgroundColor: '#150E14',
+          padding: '0 4px',
+          fontSize: '16px'
+        },
+        '100%': {
+          top: '14px',
+          fontSize: '14px'
+        }
       }
 
     },
@@ -119,6 +144,8 @@ module.exports = {
       closeMenu: 'closeMenu 1s',
       openMenuMobile: 'openMenuMobile 1s',
       closeMenuMobile: 'closeMenuMobile 1s',
+      focusInput: 'focusInput 0.5s',
+      focusInputEnd: 'focusInputEnd 0.7s'
     },
     
   },

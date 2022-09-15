@@ -45,13 +45,6 @@ a {
   border-bottom: 1px solid #fff !important;
 }
 
-/* .MuiIconButton-root{
-  color: #fff !important
-} */
-
-/* .MuiButtonBase-root{
-  color: rgb(255, 255, 255) !important
-} */
 .MuiIconButton-label{
   color: rgb(184, 184, 184) !important;
 }
@@ -72,4 +65,49 @@ a {
 
 .scrollbar::-webkit-scrollbar-thumb:hover{
   background-color: rgb(115, 19, 204);
+}
+
+.input{
+  outline: none;
+  border: 1px solid blueviolet;
+  background-color: transparent;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.label{
+  animation-fill-mode: forwards;
+}
+
+.input:focus ~ label{
+  animation-fill-mode: forwards;
+}
+
+
+.input::placeholder{
+  color: rgba(255, 255, 255, 0.845);
+  font-size: 14px;
+}
+
+.btn{
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  padding: 7px;
+  transition: .5s;
+  margin-top: 8px;
+  border-radius: 7px;
+  font-weight: bold;
+  border: 1px solid blueviolet;
+  box-shadow: 1px 1px 10px 5px rgb(85, 3, 162);
+}
+
+.btn:hover{
+  background-color: blueviolet;
+  transition: .5s;
+  box-shadow: 1px 1px 20px 5px rgb(85, 3, 162);
 }
